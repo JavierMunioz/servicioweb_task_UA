@@ -13,7 +13,7 @@ def get_items():
     return jsonify(items), 200
 
 @app.route('/', methods=['GET'])
-def get_items():
+def home():
     return jsonify({"Welcome":"Service with Flask"}), 200
 
 @app.route('/items/<int:item_id>', methods=['GET'])
