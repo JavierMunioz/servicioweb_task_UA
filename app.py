@@ -12,6 +12,10 @@ items = [
 def get_items():
     return jsonify(items), 200
 
+@app.route('/', methods=['GET'])
+def get_items():
+    return jsonify({"Welcome":"Service with Flask"}), 200
+
 @app.route('/items/<int:item_id>', methods=['GET'])
 def get_item(item_id):
     item = next((item for item in items if item['id'] == item_id), None)
